@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Surfaces */
+  --bg-primary: #FAF9F6;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F3EEF9;
+  --border-subtle: #E6E0F0;
+  --border-prominent: #D4CCE5;
+
+  /* Typography */
+  --text-primary: #12101F;
+  --text-secondary: #4A4459;
+  --text-muted: #665D77;
+
+  /* Accents - Calibrated for Light Backgrounds */
+  --accent-coral: #E11D48;
+  --accent-coral-bg: #FFE4E6;
+  --accent-coral-text: #9F1239;
+
+  --accent-violet: #6D28D9;
+  --accent-violet-bg: #EDE9FE;
+  --accent-violet-text: #5B21B6;
+
+  --accent-yellow: #D97706;
+  --accent-yellow-bg: #FEF3C7;
+  --accent-yellow-text: #92400E;
+
+  --accent-cyan: #0284C7;
+  --accent-cyan-bg: #E0F2FE;
+
+  /* Utilities */
+  --focus-ring: #6D28D9;
+  --cursor-dot: #E11D48;
+  --cursor-ring: rgba(109, 40, 217, 0.4);
+}
+
+.dark {
+  /* Surfaces */
+  --bg-primary: #0C0A14;
+  --bg-secondary: #161224;
+  --bg-tertiary: #201A33;
+  --border-subtle: #2A2341;
+  --border-prominent: #3E3460;
+
+  /* Typography */
+  --text-primary: #F7F5FC;
+  --text-secondary: #C8C2D9;
+  --text-muted: #958CAE;
+
+  /* Accents - Calibrated for Dark Backgrounds */
+  --accent-coral: #FB7185;
+  --accent-coral-bg: #371520;
+  --accent-coral-text: #FECDD3;
+
+  --accent-violet: #A78BFA;
+  --accent-violet-bg: #271E42;
+  --accent-violet-text: #DDD6FE;
+
+  --accent-yellow: #FBBF24;
+  --accent-yellow-bg: #352507;
+  --accent-yellow-text: #FDE68A;
+
+  --accent-cyan: #38BDF8;
+  --accent-cyan-bg: #0C2B42;
+
+  /* Utilities */
+  --focus-ring: #A78BFA;
+  --cursor-dot: #FB7185;
+  --cursor-ring: rgba(167, 139, 250, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Fluid Typography Utilities */
+.hero-title-clamp {
+  font-size: clamp(2.75rem, 8vw, 6.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.section-title-clamp {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+/* Reduced Motion Safeguard */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
