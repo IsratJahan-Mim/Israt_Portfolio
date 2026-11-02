@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion, type Variants } from "motion/react";
 import { CANDIDATE_INFO } from "@/lib/constants";
-import { FloatingShape } from "@/components/ui/FloatingShape";
 
 export function Hero() {
   const words = CANDIDATE_INFO.name.split(" ");
@@ -44,32 +43,6 @@ export function Hero() {
       >
         <div className="absolute w-[360px] sm:w-[600px] h-[360px] sm:h-[600px] bg-gradient-to-tr from-accent-violet/20 via-accent-coral/15 to-accent-yellow/20 rounded-full blur-3xl opacity-60 dark:opacity-40 animate-pulse-slow" />
       </div>
-
-      {/* Floating Animated Geometric Shapes (Circle, Squiggle, Star, Blob) */}
-      <FloatingShape
-        type="circle"
-        color="coral"
-        size={72}
-        className="absolute top-28 left-[8%] sm:left-[14%]"
-      />
-      <FloatingShape
-        type="star"
-        color="yellow"
-        size={64}
-        className="absolute top-36 right-[8%] sm:right-[15%]"
-      />
-      <FloatingShape
-        type="squiggle"
-        color="violet"
-        size={56}
-        className="absolute bottom-32 left-[6%] sm:left-[12%]"
-      />
-      <FloatingShape
-        type="blob"
-        color="coral"
-        size={84}
-        className="absolute bottom-28 right-[7%] sm:right-[16%]"
-      />
 
       <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
         {/* Available Badge */}
