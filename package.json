@@ -12,7 +12,7 @@
     "@next/swc-wasm-nodejs": "^15.5.28",
     "embla-carousel-react": "^8.5.2",
     "motion": "^12.4.7",
-    "next": "^15.1.7",
+    "next": "^16.4.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -21,8 +21,8 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.20.1",
-    "eslint-config-next": "^15.1.7",
+    "eslint": "^4.0.0",
+    "eslint-config-next": "^0.2.4",
     "postcss": "^8.5.2",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.3"
