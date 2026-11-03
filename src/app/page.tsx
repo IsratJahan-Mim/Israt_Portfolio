@@ -1,11 +1,11 @@
 import { Hero } from "@/components/sections/Hero";
-import { ToolsMarquee } from "@/components/sections/ToolsMarquee";
+import { WhatIDo } from "@/components/sections/WhatIDo";
 import { About } from "@/components/sections/About";
-import { SkillsBento } from "@/components/sections/SkillsBento";
+import { SelectedWorks } from "@/components/sections/SelectedWorks";
+import { DesignProcess } from "@/components/sections/DesignProcess";
 import { Experience } from "@/components/sections/Experience";
-import { FeaturedProject } from "@/components/sections/FeaturedProject";
-import { Certifications } from "@/components/sections/Certifications";
-import { Languages } from "@/components/sections/Languages";
+import { SkillsAndTools } from "@/components/sections/SkillsAndTools";
+import { EducationCertifications } from "@/components/sections/EducationCertifications";
 import { Contact } from "@/components/sections/Contact";
 import { JsonLd } from "@/components/ui/JsonLd";
 
@@ -15,34 +15,32 @@ export default function Home() {
       {/* Structured SEO Schema */}
       <JsonLd />
 
-      {/* Sections in Locked Order */}
-      {/* 1. Hero */}
+      {/* 1. Hero Section */}
       <Hero />
 
-      {/* Tools Marquee Strip */}
-      <ToolsMarquee />
+      {/* 2. What I Do (Services) */}
+      <WhatIDo />
 
-      {/* 2. About */}
+      {/* 3. About Me */}
       <About />
 
-      {/* 3. Skills (Bento Grid) */}
-      <SkillsBento />
+      {/* 4. Selected Works / Featured Projects */}
+      <SelectedWorks />
 
-      {/* 4. Experience */}
+      {/* 5. How I Work / My Design Process */}
+      <DesignProcess />
+
+      {/* 6. Professional Experience */}
       <Experience />
 
-      {/* 5. Featured Project (SafeNest preview + 'More work coming soon') */}
-      <FeaturedProject />
+      {/* 7. Skills & Tools */}
+      <SkillsAndTools />
 
-      {/* 6. Certifications */}
-      <Certifications />
+      {/* 8. Education & Certifications */}
+      <EducationCertifications />
 
-      {/* 7. Languages */}
-      <Languages />
-
-      {/* 8. Contact & References */}
+      {/* 9. Contact / Get in Touch */}
       <Contact />
     </>
   );
 }
-

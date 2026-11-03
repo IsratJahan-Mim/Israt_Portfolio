@@ -5,54 +5,64 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border-subtle bg-background-secondary py-12 px-4 transition-colors">
+    <footer className="border-t border-border-subtle bg-background-secondary py-12 px-4 sm:px-6 transition-colors">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
         <div>
-          <p className="font-heading font-bold text-lg text-content-primary">
-            {CANDIDATE_INFO.name}
-          </p>
-          <p className="text-sm text-content-secondary mt-1 max-w-md">
+          <Link
+            href="/"
+            className="font-heading font-extrabold text-2xl text-content-primary tracking-tight inline-block"
+          >
+            MIM<span className="text-accent-terracotta">.</span>
+          </Link>
+          <p className="text-xs sm:text-sm text-content-secondary mt-1 max-w-md">
             {CANDIDATE_INFO.headline}
           </p>
-          <p className="text-xs text-content-muted mt-1">
+          <p className="text-xs text-content-muted mt-0.5">
             Based in {CANDIDATE_INFO.location}
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 text-sm font-medium">
+        <div className="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm font-medium">
           <a
             href={`mailto:${CANDIDATE_INFO.email}`}
-            className="text-accent-coral hover:underline focus:outline-none focus:ring-2 focus:ring-accent-coral rounded px-1"
+            className="text-content-secondary hover:text-accent-terracotta transition-colors"
           >
-            {CANDIDATE_INFO.email}
+            Email
           </a>
-          <span className="hidden sm:inline text-content-muted" aria-hidden="true">
-            •
-          </span>
+          <span className="text-content-muted" aria-hidden="true">•</span>
           <a
             href={CANDIDATE_INFO.linkedIn}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent-violet hover:underline focus:outline-none focus:ring-2 focus:ring-accent-violet rounded px-1"
+            className="text-content-secondary hover:text-accent-terracotta transition-colors"
           >
-            LinkedIn Profile
+            LinkedIn
           </a>
-          <span className="hidden sm:inline text-content-muted" aria-hidden="true">
-            •
-          </span>
-          <Link
-            href="/projects/safenest"
-            className="text-accent-yellow hover:underline focus:outline-none focus:ring-2 focus:ring-accent-yellow rounded px-1"
+          <span className="text-content-muted" aria-hidden="true">•</span>
+          <a
+            href={CANDIDATE_INFO.behance}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-content-secondary hover:text-accent-terracotta transition-colors"
           >
-            SafeNest Project
-          </Link>
+            Behance
+          </a>
+          <span className="text-content-muted" aria-hidden="true">•</span>
+          <a
+            href={CANDIDATE_INFO.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-content-secondary hover:text-accent-terracotta transition-colors"
+          >
+            Facebook
+          </a>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-border-subtle/50 text-center text-xs text-content-muted">
+      <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-border-subtle/60 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-content-muted text-center sm:text-left">
         <p>© {currentYear} {CANDIDATE_INFO.name}. All rights reserved.</p>
+        <p>Crafted with precision &amp; care.</p>
       </div>
     </footer>
   );
 }
-

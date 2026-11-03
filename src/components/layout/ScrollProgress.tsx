@@ -12,10 +12,9 @@ export function ScrollProgress() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent-coral via-accent-violet to-accent-yellow origin-left z-50 pointer-events-none"
+      className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent-terracotta via-amber-500 to-accent-terracotta origin-left z-50 pointer-events-none"
       style={{ scaleX }}
       aria-hidden="true"
     />
   );
 }
-

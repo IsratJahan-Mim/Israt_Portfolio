@@ -15,8 +15,8 @@ export function SectionHeading({
 
   return (
     <div className={`mb-10 sm:mb-14 ${isCenter ? "text-center mx-auto" : ""} max-w-3xl`}>
-      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-accent-violet-bg text-accent-violet-text border border-accent-violet/20 mb-3 shadow-xs">
-        <span className="w-1.5 h-1.5 rounded-full bg-accent-violet animate-pulse" />
+      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-accent-terracotta-bg text-accent-terracotta-text border border-accent-terracotta/20 mb-3 shadow-xs">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent-terracotta" />
         {badge}
       </span>
       <h2 className="section-title-clamp font-heading font-bold text-content-primary tracking-tight">
@@ -30,4 +30,3 @@ export function SectionHeading({
     </div>
   );
 }
-

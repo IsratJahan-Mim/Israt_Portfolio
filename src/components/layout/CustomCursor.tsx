@@ -39,7 +39,8 @@ export function CustomCursor() {
         target.closest("a") ||
         target.closest("button") ||
         target.closest("[role='button']") ||
-        target.closest("input[type='submit']")
+        target.closest("input") ||
+        target.closest("textarea")
       );
 
       setIsHovered(isInteractive);
@@ -65,7 +66,7 @@ export function CustomCursor() {
     >
       {/* Outer Spring Trailing Ring */}
       <motion.div
-        className="fixed top-0 left-0 rounded-full border border-accent-violet/60 dark:border-accent-violet/70 bg-accent-violet/10 backdrop-blur-[1px] pointer-events-none"
+        className="fixed top-0 left-0 rounded-full border border-accent-terracotta/60 dark:border-accent-terracotta/70 bg-accent-terracotta/10 pointer-events-none"
         style={{
           x: smoothX,
           y: smoothY,
@@ -73,9 +74,9 @@ export function CustomCursor() {
           translateY: "-50%",
         }}
         animate={{
-          width: isHovered ? 48 : 28,
-          height: isHovered ? 48 : 28,
-          scale: isHovered ? 1.25 : 1,
+          width: isHovered ? 44 : 26,
+          height: isHovered ? 44 : 26,
+          scale: isHovered ? 1.2 : 1,
         }}
         transition={{
           type: "spring",
@@ -86,7 +87,7 @@ export function CustomCursor() {
 
       {/* Center Precision Dot */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-accent-coral pointer-events-none shadow-sm"
+        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-accent-terracotta pointer-events-none shadow-sm"
         style={{
           x: cursorX,
           y: cursorY,
@@ -101,4 +102,3 @@ export function CustomCursor() {
     </div>
   );
 }
-

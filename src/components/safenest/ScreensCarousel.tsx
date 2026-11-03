@@ -77,7 +77,7 @@ export function ScreensCarousel() {
                 <div
                   className={`bg-background-secondary border rounded-3xl p-4 sm:p-5 transition-all duration-300 shadow-md ${
                     isSelected
-                      ? "border-accent-violet scale-100 ring-2 ring-accent-violet/30"
+                      ? "border-accent-terracotta scale-100 ring-2 ring-accent-terracotta/30"
                       : "border-border-subtle scale-95 opacity-70"
                   }`}
                 >
@@ -101,7 +101,7 @@ export function ScreensCarousel() {
 
                   {/* Caption */}
                   <div className="mt-4 text-center">
-                    <p className="text-xs uppercase tracking-wider font-semibold text-accent-violet">
+                    <p className="text-xs uppercase tracking-wider font-semibold text-accent-terracotta">
                       Screen 0{index + 1}
                     </p>
                     <h4 className="font-heading font-bold text-base sm:text-lg text-content-primary mt-0.5">
@@ -124,7 +124,7 @@ export function ScreensCarousel() {
           type="button"
           onClick={scrollPrev}
           aria-label="Previous screen"
-          className="w-12 h-12 rounded-full border border-border-prominent bg-background-secondary text-content-primary hover:border-accent-violet hover:text-accent-violet shadow-sm flex items-center justify-center transition-all focus:outline-none focus:ring-2 focus:ring-accent-violet"
+          className="w-12 h-12 rounded-full border border-border-prominent bg-background-secondary text-content-primary hover:border-accent-terracotta hover:text-accent-terracotta shadow-sm flex items-center justify-center transition-all focus:outline-none focus:ring-2 focus:ring-accent-terracotta"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -151,9 +151,9 @@ export function ScreensCarousel() {
               aria-selected={selectedIndex === dotIdx}
               aria-label={`Go to screen ${dotIdx + 1}`}
               onClick={() => scrollTo(dotIdx)}
-              className={`h-2.5 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-accent-violet ${
+              className={`h-2.5 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-accent-terracotta ${
                 selectedIndex === dotIdx
-                  ? "w-8 bg-accent-violet"
+                  ? "w-8 bg-accent-terracotta"
                   : "w-2.5 bg-border-prominent hover:bg-content-muted"
               }`}
             />
@@ -164,7 +164,7 @@ export function ScreensCarousel() {
           type="button"
           onClick={scrollNext}
           aria-label="Next screen"
-          className="w-12 h-12 rounded-full border border-border-prominent bg-background-secondary text-content-primary hover:border-accent-violet hover:text-accent-violet shadow-sm flex items-center justify-center transition-all focus:outline-none focus:ring-2 focus:ring-accent-violet"
+          className="w-12 h-12 rounded-full border border-border-prominent bg-background-secondary text-content-primary hover:border-accent-terracotta hover:text-accent-terracotta shadow-sm flex items-center justify-center transition-all focus:outline-none focus:ring-2 focus:ring-accent-terracotta"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -188,4 +188,3 @@ export function ScreensCarousel() {
     </div>
   );
 }
-

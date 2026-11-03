@@ -1,166 +1,154 @@
 "use client";
 
 import Link from "next/link";
-import { motion, type Variants } from "motion/react";
+import Image from "next/image";
+import { motion } from "motion/react";
 import { CANDIDATE_INFO } from "@/lib/constants";
 
 export function Hero() {
-  const words = CANDIDATE_INFO.name.split(" ");
-
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.12,
-        delayChildren: 0.1,
-      },
-    },
-  };
-
-  const wordVariants: Variants = {
-    hidden: { opacity: 0, y: 32 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.7,
-        ease: [0.22, 1, 0.36, 1],
-      },
-    },
-  };
-
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center pt-24 pb-16 px-4 overflow-hidden"
+      className="relative min-h-[92vh] sm:min-h-screen flex items-center pt-24 sm:pt-28 pb-16 px-4 sm:px-6 overflow-hidden"
       aria-label="Introduction"
     >
-      {/* Background Animated Gradient Blobs */}
+      {/* Background Soft Glow */}
       <div
         className="absolute inset-0 pointer-events-none -z-10 flex items-center justify-center overflow-hidden"
         aria-hidden="true"
       >
-        <div className="absolute w-[360px] sm:w-[600px] h-[360px] sm:h-[600px] bg-gradient-to-tr from-accent-violet/20 via-accent-coral/15 to-accent-yellow/20 rounded-full blur-3xl opacity-60 dark:opacity-40 animate-pulse-slow" />
+        <div className="absolute top-1/4 right-1/4 w-[380px] sm:w-[580px] h-[380px] sm:h-[580px] bg-gradient-to-br from-accent-terracotta/10 via-amber-500/5 to-transparent rounded-full blur-3xl opacity-70" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
-        {/* Available Badge */}
+      <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        {/* Left Column: Text & CTAs */}
+        <div className="lg:col-span-7 flex flex-col items-start text-left">
+          {/* Tag / Micro-Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase text-content-muted bg-background-tertiary border border-border-subtle mb-6"
+          >
+            <span>CREATIVE PORTFOLIO</span>
+            <span className="text-accent-terracotta">•</span>
+            <span>2026</span>
+          </motion.div>
+
+          {/* Headline matching mockup typography */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="hero-title-clamp font-heading font-extrabold text-content-primary tracking-tight leading-[1.08]"
+          >
+            Hello, I&apos;m {CANDIDATE_INFO.shortName}.<br />
+            <span className="text-accent-terracotta">Graphic Designer,</span><br />
+            UI/UX Designer &amp;<br />
+            Digital Marketer.
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-6 text-base sm:text-xl text-content-secondary max-w-xl leading-relaxed"
+          >
+            {CANDIDATE_INFO.subheadline}
+          </motion.p>
+
+          {/* Action Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-8 flex flex-wrap items-center gap-4 w-full sm:w-auto"
+          >
+            <Link
+              href="/#works"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-heading font-semibold text-sm sm:text-base text-white bg-[#1C1815] hover:bg-black dark:bg-[#FAF7F2] dark:text-[#1C1815] dark:hover:bg-white shadow-md transform hover:-translate-y-0.5 active:translate-y-0 transition-all focus:outline-none focus:ring-2 focus:ring-accent-terracotta"
+            >
+              <span>Explore My Work</span>
+              <span>↗</span>
+            </Link>
+
+            <a
+              href={`mailto:${CANDIDATE_INFO.email}?subject=Requesting%20Resume%20-%20Israt%20Jahan%20Mim`}
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-heading font-semibold text-sm sm:text-base text-content-primary bg-background-secondary border border-border-prominent hover:border-accent-terracotta hover:text-accent-terracotta shadow-xs transform hover:-translate-y-0.5 active:translate-y-0 transition-all focus:outline-none focus:ring-2 focus:ring-accent-terracotta/40"
+            >
+              <span>Download CV</span>
+              <span>↓</span>
+            </a>
+          </motion.div>
+
+          {/* Status Badge */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-8 inline-flex items-center gap-2.5 text-xs sm:text-sm font-medium text-content-secondary"
+          >
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+            </span>
+            <span>{CANDIDATE_INFO.status}</span>
+          </motion.div>
+        </div>
+
+        {/* Right Column: Mim's Portrait & Floating Skills Card */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-accent-coral-bg text-accent-coral-text border border-accent-coral/30 mb-6 shadow-xs"
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="lg:col-span-5 relative flex justify-center lg:justify-end"
         >
-          <span className="w-2 h-2 rounded-full bg-accent-coral animate-ping" />
-          <span>SEO &amp; Digital Marketing Specialist</span>
-        </motion.div>
+          <div className="relative w-full max-w-[360px] sm:max-w-[420px] aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gradient-to-b from-[#F5ECE0] to-[#EBE0D0] dark:from-[#2A231C] dark:to-[#1E1914] border-2 border-border-subtle p-3 shadow-xl">
+            {/* Inner photo container */}
+            <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-[#FAF5EE] dark:bg-[#1C1815]">
+              <Image
+                src="/images/mim-portrait.jpg"
+                alt="Israt Jahan Mim - Graphic Designer, UI/UX Designer & Digital Marketer"
+                fill
+                priority
+                sizes="(max-width: 768px) 90vw, 420px"
+                className="object-cover object-top"
+              />
 
-        {/* The H1 is her name, fluid clamp-based */}
-        <motion.h1
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="hero-title-clamp font-heading font-extrabold text-content-primary tracking-tight max-w-4xl"
-        >
-          {words.map((word, i) => (
-            <motion.span
-              key={i}
-              variants={wordVariants}
-              className="inline-block mr-[0.3em] last:mr-0 bg-gradient-to-br from-content-primary via-content-primary to-accent-violet bg-clip-text text-transparent"
+              {/* Gradient overlay at bottom of image for seamless blending */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
+            </div>
+
+            {/* Floating Overlay Badge (matching mockup) */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 bg-background-secondary/95 dark:bg-background-secondary/90 backdrop-blur-md border border-border-subtle rounded-2xl p-3.5 shadow-xl flex flex-col gap-2 min-w-[170px]"
             >
-              {word}
-            </motion.span>
-          ))}
-        </motion.h1>
-
-        {/* Positioning Headline */}
-        <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.35, duration: 0.6 }}
-          className="mt-6 text-lg sm:text-2xl font-medium text-content-secondary max-w-3xl leading-relaxed"
-        >
-          {CANDIDATE_INFO.headline}
-        </motion.p>
-
-        {/* Location & Graduate Credential */}
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45, duration: 0.5 }}
-          className="mt-2 text-sm text-content-muted flex items-center justify-center gap-1.5"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="w-4 h-4 text-accent-coral"
-            aria-hidden="true"
-          >
-            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-          <span>{CANDIDATE_INFO.location}</span>
-          <span className="text-content-muted/60" aria-hidden="true">•</span>
-          <span>B.Sc in ICE Graduate</span>
-        </motion.p>
-
-        {/* Two CTAs: "Contact me" (mailto) & "View SafeNest case study" */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.55, duration: 0.6 }}
-          className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
-        >
-          <a
-            href={`mailto:${CANDIDATE_INFO.email}`}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full font-heading font-semibold text-base text-white bg-gradient-to-r from-accent-coral via-rose-600 to-accent-coral hover:opacity-95 shadow-lg shadow-accent-coral/25 transform hover:-translate-y-0.5 active:translate-y-0 transition-all focus:outline-none focus:ring-3 focus:ring-accent-coral/50"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-4 h-4"
-              aria-hidden="true"
-            >
-              <rect width="20" height="16" x="2" y="4" rx="2" />
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-            </svg>
-            Contact me
-          </a>
-
-          <Link
-            href="/projects/safenest"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full font-heading font-semibold text-base text-content-primary bg-background-secondary border border-border-prominent hover:border-accent-violet hover:text-accent-violet shadow-sm transform hover:-translate-y-0.5 active:translate-y-0 transition-all focus:outline-none focus:ring-3 focus:ring-accent-violet/50"
-          >
-            <span>View SafeNest case study</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-4 h-4 transition-transform group-hover:translate-x-1"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
-          </Link>
+              <div className="flex items-center gap-2 text-xs font-semibold text-content-primary">
+                <span className="w-5 h-5 rounded-lg bg-orange-100 dark:bg-orange-950/60 text-orange-600 flex items-center justify-center text-[11px]">
+                  🎨
+                </span>
+                <span>Graphic Design</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs font-semibold text-content-primary">
+                <span className="w-5 h-5 rounded-lg bg-amber-100 dark:bg-amber-950/60 text-amber-600 flex items-center justify-center text-[11px]">
+                  📱
+                </span>
+                <span>UI/UX Design</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs font-semibold text-content-primary">
+                <span className="w-5 h-5 rounded-lg bg-rose-100 dark:bg-rose-950/60 text-rose-600 flex items-center justify-center text-[11px]">
+                  📈
+                </span>
+                <span>Digital Marketing</span>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
   );
 }
-

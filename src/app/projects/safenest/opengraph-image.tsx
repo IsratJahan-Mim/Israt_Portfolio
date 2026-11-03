@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { SAFENEST_DATA } from "@/data/safenestData";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 export const alt = `${SAFENEST_DATA.title} - UI/UX Case Study`;
 export const size = {
   width: 1200,
@@ -20,8 +20,8 @@ export default async function Image() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "80px",
-          background: "linear-gradient(135deg, #0C0A14 0%, #201736 50%, #0C0A14 100%)",
-          color: "#F7F5FC",
+          background: "linear-gradient(135deg, #1C1815 0%, #2A231C 50%, #1C1815 100%)",
+          color: "#FAF7F2",
           fontFamily: "sans-serif",
         }}
       >
@@ -30,26 +30,25 @@ export default async function Image() {
             style={{
               padding: "8px 20px",
               borderRadius: "9999px",
-              background: "#371520",
-              color: "#FECDD3",
-              fontSize: "18px",
+              background: "#381A0E",
+              color: "#FFB08E",
+              fontSize: "20px",
               fontWeight: "bold",
-              border: "1px solid #FB7185",
+              border: "1px solid #E65C24",
             }}
           >
-            Figma Mobile UI Concept
+            UI/UX Case Study
           </span>
-          <span style={{ fontSize: "22px", color: "#A78BFA" }}>
-            Israt Jahan Mim Case Study
-          </span>
+          <span style={{ fontSize: "24px", color: "#C8BFB5" }}>Figma Concept</span>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           <div
             style={{
-              fontSize: "64px",
+              fontSize: "72px",
               fontWeight: "800",
-              lineHeight: 1.1,
+              lineHeight: 1.05,
+              letterSpacing: "-0.02em",
               color: "#FFFFFF",
             }}
           >
@@ -57,9 +56,10 @@ export default async function Image() {
           </div>
           <div
             style={{
-              fontSize: "26px",
-              color: "#C8C2D9",
-              maxWidth: "900px",
+              fontSize: "28px",
+              fontWeight: "500",
+              color: "#FFB08E",
+              maxWidth: "800px",
             }}
           >
             {SAFENEST_DATA.tagline}
@@ -71,14 +71,14 @@ export default async function Image() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            borderTop: "1px solid #2C2444",
+            borderTop: "1px solid #38312A",
             paddingTop: "24px",
             fontSize: "20px",
-            color: "#958CAE",
+            color: "#C8BFB5",
           }}
         >
-          <span>6-Screen Interactive Embla Carousel</span>
-          <span>Accommodation Discovery &amp; Booking</span>
+          <span>Role: {SAFENEST_DATA.role}</span>
+          <span>MIM. Portfolio</span>
         </div>
       </div>
     ),
@@ -87,4 +87,3 @@ export default async function Image() {
     }
   );
 }
-

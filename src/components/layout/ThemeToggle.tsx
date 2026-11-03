@@ -35,7 +35,7 @@ export function ThemeToggle() {
   if (!mounted) {
     return (
       <div
-        className="w-10 h-10 rounded-full border border-border-subtle bg-background-secondary opacity-60"
+        className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-border-subtle bg-background-secondary opacity-60"
         aria-hidden="true"
       />
     );
@@ -45,7 +45,7 @@ export function ThemeToggle() {
     <button
       onClick={toggleTheme}
       type="button"
-      className="relative flex items-center justify-center w-10 h-10 rounded-full border border-border-subtle bg-background-secondary text-content-primary hover:border-accent-violet hover:text-accent-violet transition-colors focus:outline-none focus:ring-2 focus:ring-accent-violet/60"
+      className="relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-border-subtle bg-background-secondary text-content-primary hover:border-accent-terracotta hover:text-accent-terracotta transition-colors focus:outline-none focus:ring-2 focus:ring-accent-terracotta/50"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       title={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
@@ -59,7 +59,7 @@ export function ThemeToggle() {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="w-5 h-5 text-accent-yellow"
+          className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400"
           aria-hidden="true"
         >
           <circle cx="12" cy="12" r="4" />
@@ -82,7 +82,7 @@ export function ThemeToggle() {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="w-5 h-5 text-accent-violet"
+          className="w-4 h-4 sm:w-5 sm:h-5 text-content-secondary"
           aria-hidden="true"
         >
           <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
@@ -91,4 +91,3 @@ export function ThemeToggle() {
     </button>
   );
 }
-

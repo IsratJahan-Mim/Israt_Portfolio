@@ -1,8 +1,8 @@
 import { ImageResponse } from "next/og";
 import { CANDIDATE_INFO } from "@/lib/constants";
 
-export const runtime = "edge";
-export const alt = `${CANDIDATE_INFO.name} - SEO & Digital Marketing Specialist`;
+export const runtime = "nodejs";
+export const alt = `${CANDIDATE_INFO.brand} - ${CANDIDATE_INFO.headline}`;
 export const size = {
   width: 1200,
   height: 630,
@@ -20,37 +20,37 @@ export default async function Image() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "80px",
-          background: "linear-gradient(135deg, #0C0A14 0%, #1A132E 50%, #0C0A14 100%)",
-          color: "#F7F5FC",
+          background: "linear-gradient(135deg, #1C1815 0%, #2A231C 50%, #1C1815 100%)",
+          color: "#FAF7F2",
           fontFamily: "sans-serif",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <div
             style={{
-              width: "48px",
-              height: "48px",
-              borderRadius: "14px",
-              background: "linear-gradient(135deg, #E11D48, #6D28D9, #D97706)",
+              width: "56px",
+              height: "56px",
+              borderRadius: "16px",
+              background: "#E65C24",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: "20px",
+              fontSize: "24px",
               fontWeight: "bold",
               color: "#FFF",
             }}
           >
-            JM
+            M
           </div>
-          <span style={{ fontSize: "24px", fontWeight: "600", color: "#C8C2D9" }}>
-            Portfolio &amp; Case Studies
+          <span style={{ fontSize: "28px", fontWeight: "700", color: "#FAF7F2" }}>
+            MIM.
           </span>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           <div
             style={{
-              fontSize: "64px",
+              fontSize: "56px",
               fontWeight: "800",
               lineHeight: 1.1,
               letterSpacing: "-0.02em",
@@ -61,9 +61,9 @@ export default async function Image() {
           </div>
           <div
             style={{
-              fontSize: "28px",
-              fontWeight: "500",
-              color: "#FB7185",
+              fontSize: "26px",
+              fontWeight: "600",
+              color: "#E65C24",
             }}
           >
             {CANDIDATE_INFO.headline}
@@ -75,14 +75,14 @@ export default async function Image() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            borderTop: "1px solid #2C2444",
+            borderTop: "1px solid #38312A",
             paddingTop: "24px",
             fontSize: "20px",
-            color: "#958CAE",
+            color: "#C8BFB5",
           }}
         >
           <span>{CANDIDATE_INFO.location}</span>
-          <span>isratjahanmim.com</span>
+          <span>{CANDIDATE_INFO.email}</span>
         </div>
       </div>
     ),
@@ -91,4 +91,3 @@ export default async function Image() {
     }
   );
 }
-

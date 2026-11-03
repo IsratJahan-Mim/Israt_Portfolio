@@ -14,6 +14,7 @@ const config: Config = {
           primary: "var(--bg-primary)",
           secondary: "var(--bg-secondary)",
           tertiary: "var(--bg-tertiary)",
+          card: "var(--bg-card)",
         },
         border: {
           subtle: "var(--border-subtle)",
@@ -25,6 +26,12 @@ const config: Config = {
           muted: "var(--text-muted)",
         },
         accent: {
+          terracotta: {
+            DEFAULT: "var(--accent-terracotta)",
+            hover: "var(--accent-terracotta-hover)",
+            bg: "var(--accent-terracotta-bg)",
+            text: "var(--accent-terracotta-text)",
+          },
           coral: {
             DEFAULT: "var(--accent-coral)",
             bg: "var(--accent-coral-bg)",
@@ -52,12 +59,12 @@ const config: Config = {
       },
       keyframes: {
         float: {
-          "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
-          "50%": { transform: "translateY(-12px) rotate(3deg)" },
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" },
         },
-        "float-reverse": {
-          "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
-          "50%": { transform: "translateY(12px) rotate(-3deg)" },
+        "float-slow": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-12px)" },
         },
         marquee: {
           "0%": { transform: "translateX(0%)" },
@@ -69,9 +76,8 @@ const config: Config = {
         },
       },
       animation: {
-        float: "float 6s ease-in-out infinite",
-        "float-slow": "float 9s ease-in-out infinite",
-        "float-reverse": "float-reverse 7s ease-in-out infinite",
+        float: "float 4s ease-in-out infinite",
+        "float-slow": "float-slow 6s ease-in-out infinite",
         marquee: "marquee 25s linear infinite",
         "pulse-slow": "pulseSlow 8s ease-in-out infinite",
       },
@@ -81,4 +87,3 @@ const config: Config = {
 };
 
 export default config;
-

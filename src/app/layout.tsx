@@ -23,8 +23,8 @@ const inter = Inter({
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#FAF9F6" },
-    { media: "(prefers-color-scheme: dark)", color: "#0C0A14" },
+    { media: "(prefers-color-scheme: light)", color: "#FAF7F2" },
+    { media: "(prefers-color-scheme: dark)", color: "#141210" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -34,19 +34,22 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${CANDIDATE_INFO.name} | SEO & Digital Marketing Specialist`,
-    template: `%s | ${CANDIDATE_INFO.name}`,
+    default: `${CANDIDATE_INFO.brand} | ${CANDIDATE_INFO.headline}`,
+    template: `%s | ${CANDIDATE_INFO.brand}`,
   },
   description:
-    "Portfolio of Israt Jahan Mim - Information & Communication Engineering graduate specializing in SEO, digital marketing, content strategy, and social media management in Dhaka, Bangladesh.",
+    "Portfolio of Israt Jahan Mim (MIM.) – Graphic Designer, UI/UX Designer, and Digital Marketer based in Dhaka, Bangladesh.",
   keywords: [
+    "MIM.",
     "Israt Jahan Mim",
-    "SEO Specialist Dhaka",
-    "Digital Marketing Bangladesh",
-    "Social Media Manager",
-    "On-Page SEO",
-    "Technical SEO",
-    "Figma UI Design",
+    "Graphic Designer",
+    "UI/UX Designer",
+    "Digital Marketer",
+    "Figma",
+    "SafeNest",
+    "Dhaka Designer",
+    "Brand Identity",
+    "SEO Specialist",
   ],
   authors: [{ name: CANDIDATE_INFO.name, url: SITE_URL }],
   creator: CANDIDATE_INFO.name,
@@ -57,16 +60,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    title: `${CANDIDATE_INFO.name} | SEO & Digital Marketing Specialist`,
-    description:
-      "Information & Communication Engineering graduate specializing in SEO, digital marketing, and social media management.",
-    siteName: `${CANDIDATE_INFO.name} Portfolio`,
+    title: `${CANDIDATE_INFO.brand} | ${CANDIDATE_INFO.headline}`,
+    description: CANDIDATE_INFO.subheadline,
+    siteName: `${CANDIDATE_INFO.brand} Portfolio`,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${CANDIDATE_INFO.name} | SEO & Digital Marketing Specialist`,
-    description:
-      "Information & Communication Engineering graduate specializing in SEO, digital marketing, and social media management.",
+    title: `${CANDIDATE_INFO.brand} | ${CANDIDATE_INFO.headline}`,
+    description: CANDIDATE_INFO.subheadline,
   },
   robots: {
     index: true,
@@ -119,4 +120,3 @@ export default function RootLayout({
     </html>
   );
 }
-

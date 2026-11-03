@@ -3,26 +3,33 @@
 @tailwind utilities;
 
 :root {
-  /* Surfaces */
-  --bg-primary: #FAF9F6;
+  /* Surfaces - Warm Linen & Cream Aesthetic */
+  --bg-primary: #FAF7F2;
   --bg-secondary: #FFFFFF;
-  --bg-tertiary: #F3EEF9;
-  --border-subtle: #E6E0F0;
-  --border-prominent: #D4CCE5;
+  --bg-tertiary: #F3EDE4;
+  --bg-card: #FFFFFF;
+  --border-subtle: #ECE4D8;
+  --border-prominent: #DDD1C0;
 
   /* Typography */
-  --text-primary: #12101F;
-  --text-secondary: #4A4459;
-  --text-muted: #665D77;
+  --text-primary: #1C1815;
+  --text-secondary: #5C544C;
+  --text-muted: #8A8177;
 
-  /* Accents - Calibrated for Light Backgrounds */
-  --accent-coral: #E11D48;
-  --accent-coral-bg: #FFE4E6;
-  --accent-coral-text: #9F1239;
+  /* Signature Terracotta Orange (#E65C24) */
+  --accent-terracotta: #E65C24;
+  --accent-terracotta-hover: #D24E19;
+  --accent-terracotta-bg: #FFF2EB;
+  --accent-terracotta-text: #B84514;
 
-  --accent-violet: #6D28D9;
-  --accent-violet-bg: #EDE9FE;
-  --accent-violet-text: #5B21B6;
+  /* Supporting Accents */
+  --accent-coral: #E65C24;
+  --accent-coral-bg: #FFF2EB;
+  --accent-coral-text: #B84514;
+
+  --accent-violet: #7C3AED;
+  --accent-violet-bg: #F5F3FF;
+  --accent-violet-text: #6D28D9;
 
   --accent-yellow: #D97706;
   --accent-yellow-bg: #FEF3C7;
@@ -32,31 +39,38 @@
   --accent-cyan-bg: #E0F2FE;
 
   /* Utilities */
-  --focus-ring: #6D28D9;
-  --cursor-dot: #E11D48;
-  --cursor-ring: rgba(109, 40, 217, 0.4);
+  --focus-ring: #E65C24;
+  --cursor-dot: #E65C24;
+  --cursor-ring: rgba(230, 92, 36, 0.4);
 }
 
 .dark {
-  /* Surfaces */
-  --bg-primary: #0C0A14;
-  --bg-secondary: #161224;
-  --bg-tertiary: #201A33;
-  --border-subtle: #2A2341;
-  --border-prominent: #3E3460;
+  /* Surfaces - Warm Dark Espresso / Slate */
+  --bg-primary: #141210;
+  --bg-secondary: #1E1A17;
+  --bg-tertiary: #2A241F;
+  --bg-card: #1E1A17;
+  --border-subtle: #342D26;
+  --border-prominent: #4A4036;
 
   /* Typography */
-  --text-primary: #F7F5FC;
-  --text-secondary: #C8C2D9;
-  --text-muted: #958CAE;
+  --text-primary: #FAF7F2;
+  --text-secondary: #C8BFB5;
+  --text-muted: #958B80;
 
-  /* Accents - Calibrated for Dark Backgrounds */
-  --accent-coral: #FB7185;
-  --accent-coral-bg: #371520;
-  --accent-coral-text: #FECDD3;
+  /* Signature Terracotta Orange for Dark */
+  --accent-terracotta: #FF6E38;
+  --accent-terracotta-hover: #FF8554;
+  --accent-terracotta-bg: #381A0E;
+  --accent-terracotta-text: #FFB08E;
+
+  /* Supporting Accents */
+  --accent-coral: #FF6E38;
+  --accent-coral-bg: #381A0E;
+  --accent-coral-text: #FFB08E;
 
   --accent-violet: #A78BFA;
-  --accent-violet-bg: #271E42;
+  --accent-violet-bg: #2E2545;
   --accent-violet-text: #DDD6FE;
 
   --accent-yellow: #FBBF24;
@@ -67,9 +81,9 @@
   --accent-cyan-bg: #0C2B42;
 
   /* Utilities */
-  --focus-ring: #A78BFA;
-  --cursor-dot: #FB7185;
-  --cursor-ring: rgba(167, 139, 250, 0.5);
+  --focus-ring: #FF6E38;
+  --cursor-dot: #FF6E38;
+  --cursor-ring: rgba(255, 110, 56, 0.5);
 }
 
 html {
@@ -86,15 +100,30 @@ body {
 
 /* Fluid Typography Utilities */
 .hero-title-clamp {
-  font-size: clamp(2.75rem, 8vw, 6.25rem);
-  line-height: 1.05;
-  letter-spacing: -0.035em;
+  font-size: clamp(2.5rem, 6.5vw, 4.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 .section-title-clamp {
-  font-size: clamp(2rem, 4.5vw, 3.25rem);
-  line-height: 1.15;
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  line-height: 1.2;
   letter-spacing: -0.025em;
+}
+
+/* Custom warm scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-prominent);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-terracotta);
 }
 
 /* Reduced Motion Safeguard */
@@ -106,4 +135,3 @@ body {
     scroll-behavior: auto !important;
   }
 }
-
