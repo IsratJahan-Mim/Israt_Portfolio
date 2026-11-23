@@ -113,7 +113,7 @@ export function About() {
           {/* Download CV CTA */}
           <a
             href={`mailto:${CANDIDATE_INFO.email}?subject=Requesting%20Resume%20-%20Israt%20Jahan%20Mim`}
-            className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full font-heading font-semibold text-sm sm:text-base text-white bg-[#1C1815] hover:bg-black dark:bg-[#FAF7F2] dark:text-[#1C1815] dark:hover:bg-white shadow-md transform hover:-translate-y-0.5 active:translate-y-0 transition-all focus:outline-none focus:ring-2 focus:ring-accent-terracotta"
+            className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full font-heading font-semibold text-sm sm:text-base text-white bg-accent-terracotta hover:bg-accent-terracotta-hover shadow-md shadow-accent-terracotta/25 transform hover:-translate-y-0.5 active:translate-y-0 transition-all focus:outline-none focus:ring-2 focus:ring-accent-terracotta"
           >
             <span>Download CV</span>
             <span>↓</span>

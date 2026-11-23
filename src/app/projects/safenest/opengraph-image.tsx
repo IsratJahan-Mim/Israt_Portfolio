@@ -20,8 +20,8 @@ export default async function Image() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "80px",
-          background: "linear-gradient(135deg, #1C1815 0%, #2A231C 50%, #1C1815 100%)",
-          color: "#FAF7F2",
+          background: "linear-gradient(135deg, #1C1613 0%, #2A201A 50%, #1C1613 100%)",
+          color: "#F2E4DA",
           fontFamily: "sans-serif",
         }}
       >
@@ -30,16 +30,16 @@ export default async function Image() {
             style={{
               padding: "8px 20px",
               borderRadius: "9999px",
-              background: "#381A0E",
-              color: "#FFB08E",
+              background: "#3B2620",
+              color: "#F2C1B4",
               fontSize: "20px",
               fontWeight: "bold",
-              border: "1px solid #E65C24",
+              border: "1px solid #B87866",
             }}
           >
             UI/UX Case Study
           </span>
-          <span style={{ fontSize: "24px", color: "#C8BFB5" }}>Figma Concept</span>
+          <span style={{ fontSize: "24px", color: "#D9C5B7" }}>Figma Concept</span>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -58,7 +58,7 @@ export default async function Image() {
             style={{
               fontSize: "28px",
               fontWeight: "500",
-              color: "#FFB08E",
+              color: "#F2C1B4",
               maxWidth: "800px",
             }}
           >
@@ -71,10 +71,10 @@ export default async function Image() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            borderTop: "1px solid #38312A",
+            borderTop: "1px solid #3D2F28",
             paddingTop: "24px",
             fontSize: "20px",
-            color: "#C8BFB5",
+            color: "#D9C5B7",
           }}
         >
           <span>Role: {SAFENEST_DATA.role}</span>

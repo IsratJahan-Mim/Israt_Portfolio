@@ -20,8 +20,8 @@ export default async function Image() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "80px",
-          background: "linear-gradient(135deg, #1C1815 0%, #2A231C 50%, #1C1815 100%)",
-          color: "#FAF7F2",
+          background: "linear-gradient(135deg, #1C1613 0%, #2A201A 50%, #1C1613 100%)",
+          color: "#F2E4DA",
           fontFamily: "sans-serif",
         }}
       >
@@ -31,7 +31,7 @@ export default async function Image() {
               width: "56px",
               height: "56px",
               borderRadius: "16px",
-              background: "#E65C24",
+              background: "#B87866",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -42,8 +42,8 @@ export default async function Image() {
           >
             M
           </div>
-          <span style={{ fontSize: "28px", fontWeight: "700", color: "#FAF7F2" }}>
-            MIM.
+          <span style={{ fontSize: "28px", fontWeight: "700", color: "#F2E4DA" }}>
+            MIM<span style={{ color: "#B87866" }}>.</span>
           </span>
         </div>
 
@@ -63,7 +63,7 @@ export default async function Image() {
             style={{
               fontSize: "26px",
               fontWeight: "600",
-              color: "#E65C24",
+              color: "#B87866",
             }}
           >
             {CANDIDATE_INFO.headline}
@@ -75,10 +75,10 @@ export default async function Image() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            borderTop: "1px solid #38312A",
+            borderTop: "1px solid #3D2F28",
             paddingTop: "24px",
             fontSize: "20px",
-            color: "#C8BFB5",
+            color: "#D9C5B7",
           }}
         >
           <span>{CANDIDATE_INFO.location}</span>

@@ -67,7 +67,7 @@ export function Hero() {
           >
             <Link
               href="/#works"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-heading font-semibold text-sm sm:text-base text-white bg-[#1C1815] hover:bg-black dark:bg-[#FAF7F2] dark:text-[#1C1815] dark:hover:bg-white shadow-md transform hover:-translate-y-0.5 active:translate-y-0 transition-all focus:outline-none focus:ring-2 focus:ring-accent-terracotta"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-heading font-semibold text-sm sm:text-base text-white bg-accent-terracotta hover:bg-accent-terracotta-hover shadow-md shadow-accent-terracotta/25 transform hover:-translate-y-0.5 active:translate-y-0 transition-all focus:outline-none focus:ring-2 focus:ring-accent-terracotta"
             >
               <span>Explore My Work</span>
               <span>↗</span>
@@ -104,9 +104,9 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="lg:col-span-5 relative flex justify-center lg:justify-end"
         >
-          <div className="relative w-full max-w-[360px] sm:max-w-[420px] aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gradient-to-b from-[#F5ECE0] to-[#EBE0D0] dark:from-[#2A231C] dark:to-[#1E1914] border-2 border-border-subtle p-3 shadow-xl">
+          <div className="relative w-full max-w-[360px] sm:max-w-[420px] aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gradient-to-b from-[#F2E4DA] to-[#E5D2C5] dark:from-[#271E19] dark:to-[#1C1613] border-2 border-border-subtle p-3 shadow-xl">
             {/* Inner photo container */}
-            <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-[#FAF5EE] dark:bg-[#1C1815]">
+            <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-[#FAF4EE] dark:bg-[#1C1613]">
               <Image
                 src="/images/mim-portrait.jpg"
                 alt="Israt Jahan Mim - Graphic Designer, UI/UX Designer & Digital Marketer"

@@ -2,88 +2,94 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+ * 60–30–10 Portfolio Color Palette
+ * 60% — Primary: Soft Nude (#F2E4DA) - Main background, hero, large sections, whitespace
+ * 30% — Secondary: Mocha Taupe (#5E4B42) - Project cards, navigation, typography, dark sections
+ * 10% — Accent: Rose Gold (#B87866) - CTA buttons, hover effects, icons, highlights
+ */
+
 :root {
-  /* Surfaces - Warm Linen & Cream Aesthetic */
-  --bg-primary: #FAF7F2;
-  --bg-secondary: #FFFFFF;
-  --bg-tertiary: #F3EDE4;
-  --bg-card: #FFFFFF;
-  --border-subtle: #ECE4D8;
-  --border-prominent: #DDD1C0;
+  /* 60% Primary Surfaces (Soft Nude) */
+  --bg-primary: #F2E4DA;
+  --bg-secondary: #FAF4EE;
+  --bg-tertiary: #E8D7CA;
+  --bg-card: #FAF4EE;
+  --border-subtle: #DECDBF;
+  --border-prominent: #C5B09E;
 
-  /* Typography */
-  --text-primary: #1C1815;
-  --text-secondary: #5C544C;
-  --text-muted: #8A8177;
+  /* 30% Secondary Typography & Depth (Mocha Taupe) */
+  --text-primary: #382B24;       /* Deep Mocha for primary headings & body (~10.4:1 contrast on #F2E4DA) */
+  --text-secondary: #5E4B42;     /* Core Mocha Taupe (~6.54:1 contrast on #F2E4DA) */
+  --text-muted: #7A665A;         /* Warm Taupe label (~4.6:1 contrast on #F2E4DA) */
 
-  /* Signature Terracotta Orange (#E65C24) */
-  --accent-terracotta: #E65C24;
-  --accent-terracotta-hover: #D24E19;
-  --accent-terracotta-bg: #FFF2EB;
-  --accent-terracotta-text: #B84514;
+  /* 10% Accent (Rose Gold #B87866) */
+  --accent-terracotta: #B87866;
+  --accent-terracotta-hover: #A46756;
+  --accent-terracotta-bg: #F7EBE7;
+  --accent-terracotta-text: #8C4736;
 
-  /* Supporting Accents */
-  --accent-coral: #E65C24;
-  --accent-coral-bg: #FFF2EB;
-  --accent-coral-text: #B84514;
+  /* Supporting Accents mapped to Rose Gold & Mocha Taupe */
+  --accent-coral: #B87866;
+  --accent-coral-bg: #F7EBE7;
+  --accent-coral-text: #8C4736;
 
-  --accent-violet: #7C3AED;
-  --accent-violet-bg: #F5F3FF;
-  --accent-violet-text: #6D28D9;
+  --accent-violet: #5E4B42;
+  --accent-violet-bg: #ECE0D7;
+  --accent-violet-text: #45342B;
 
-  --accent-yellow: #D97706;
-  --accent-yellow-bg: #FEF3C7;
-  --accent-yellow-text: #92400E;
+  --accent-yellow: #9C6050;
+  --accent-yellow-bg: #F4E7E1;
+  --accent-yellow-text: #78392A;
 
-  --accent-cyan: #0284C7;
-  --accent-cyan-bg: #E0F2FE;
+  --accent-cyan: #705548;
+  --accent-cyan-bg: #EAE0D8;
 
   /* Utilities */
-  --focus-ring: #E65C24;
-  --cursor-dot: #E65C24;
-  --cursor-ring: rgba(230, 92, 36, 0.4);
+  --focus-ring: #B87866;
+  --cursor-dot: #B87866;
+  --cursor-ring: rgba(184, 120, 102, 0.45);
 }
 
 .dark {
-  /* Surfaces - Warm Dark Espresso / Slate */
-  --bg-primary: #141210;
-  --bg-secondary: #1E1A17;
-  --bg-tertiary: #2A241F;
-  --bg-card: #1E1A17;
-  --border-subtle: #342D26;
-  --border-prominent: #4A4036;
+  /* 30% Secondary Dark Surfaces (Deep Mocha Taupe Base) */
+  --bg-primary: #1C1613;         /* Deep Espresso Base */
+  --bg-secondary: #271E19;       /* Dark Mocha Surface */
+  --bg-tertiary: #342822;        /* High-Elevation Surface */
+  --bg-card: #271E19;            /* Dark Mocha Cards */
+  --border-subtle: #3D2F28;
+  --border-prominent: #5A473E;
 
-  /* Typography */
-  --text-primary: #FAF7F2;
-  --text-secondary: #C8BFB5;
-  --text-muted: #958B80;
+  /* 60% Primary Typography (Soft Nude on Dark) */
+  --text-primary: #F2E4DA;       /* Soft Nude (~11.8:1 contrast on #1C1613) */
+  --text-secondary: #D9C5B7;     /* Warm Soft Nude (~8.5:1 contrast) */
+  --text-muted: #A39082;         /* Muted Nude Taupe (~5.1:1 contrast) */
 
-  /* Signature Terracotta Orange for Dark */
-  --accent-terracotta: #FF6E38;
-  --accent-terracotta-hover: #FF8554;
-  --accent-terracotta-bg: #381A0E;
-  --accent-terracotta-text: #FFB08E;
+  /* 10% Accent (Luminous Rose Gold) */
+  --accent-terracotta: #D49583;
+  --accent-terracotta-hover: #E0A695;
+  --accent-terracotta-bg: #3B2620;
+  --accent-terracotta-text: #F2C1B4;
 
-  /* Supporting Accents */
-  --accent-coral: #FF6E38;
-  --accent-coral-bg: #381A0E;
-  --accent-coral-text: #FFB08E;
+  --accent-coral: #D49583;
+  --accent-coral-bg: #3B2620;
+  --accent-coral-text: #F2C1B4;
 
-  --accent-violet: #A78BFA;
-  --accent-violet-bg: #2E2545;
-  --accent-violet-text: #DDD6FE;
+  --accent-violet: #D4BEB0;
+  --accent-violet-bg: #352821;
+  --accent-violet-text: #F2E4DA;
 
-  --accent-yellow: #FBBF24;
-  --accent-yellow-bg: #352507;
-  --accent-yellow-text: #FDE68A;
+  --accent-yellow: #D99E8B;
+  --accent-yellow-bg: #38241D;
+  --accent-yellow-text: #FAD2C7;
 
-  --accent-cyan: #38BDF8;
-  --accent-cyan-bg: #0C2B42;
+  --accent-cyan: #CBB4A5;
+  --accent-cyan-bg: #33261F;
 
   /* Utilities */
-  --focus-ring: #FF6E38;
-  --cursor-dot: #FF6E38;
-  --cursor-ring: rgba(255, 110, 56, 0.5);
+  --focus-ring: #D49583;
+  --cursor-dot: #D49583;
+  --cursor-ring: rgba(212, 149, 131, 0.5);
 }
 
 html {

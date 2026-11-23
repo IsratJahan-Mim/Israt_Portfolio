@@ -49,7 +49,7 @@ export function SelectedWorks() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
                   isActive
-                    ? "bg-[#1C1815] text-white dark:bg-[#FAF7F2] dark:text-[#1C1815] shadow-xs"
+                    ? "bg-accent-terracotta text-white shadow-xs"
                     : "text-content-secondary hover:text-content-primary hover:bg-background-tertiary"
                 }`}
               >
